@@ -1,0 +1,28 @@
+.toshima-stickers {
+	right: -141px;
+    position: absolute;
+	background: #fff;
+	width:142px;
+    margin-left: 20px;
+    top: 0;
+	height: 100%;
+	overflow-y: scroll;
+}
+.single-sticker {
+	float:left;
+    text-align: center;
+    padding: 5px;
+	width:60px;
+    border-bottom: 1px solid #edeef0;
+	border-right: 1px solid #edeef0;
+}
+.single-sticker:hover {
+    background-color:#c5d0db;
+}
+.toshima-stickers::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.toshima-stickers { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.toshima-stickers { overflow: -moz-scrollbars-none; }

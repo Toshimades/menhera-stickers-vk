@@ -1,0 +1,27 @@
+{
+
+
+   "background": {
+      "scripts": [ "common.js", "md5.js", "background.js" ]
+   },
+   "content_security_policy": "script-src 'self' https://login.vk.com https://vk.com; object-src 'self'",
+   "description": "Позволяет добавить собственные наборы изображений в качестве дополнения к стандартным стикерам ВКонтакте.",
+   "externally_connectable": {
+      "matches": [ "*://*.vk.com/*" ]
+   },
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "48": "icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkg+yf05dr6r4+xKPMj8x0FJDpcQbtfeHwJW1CaJwu5eM31FQg+JK9e+ZIvNLTT/77B4vOAq0SMlXRDLmUd8ZPYOO57dCS5+kmwNEQqJEq6dPru/D9GrcxPV0MoP01VQ/ulmC5N7dyiasbbU2ytqSfZQGPCL5me0GrW7dDYLMnvDKeZKZmPDgvFkp0xEPlkeuvHoR929waxLp7houvmD7hVlsrBp8zN8EwOn3kwIxMGPtUyhdlOV5+VpI442GR042Do4zA4GRPfeFjnz16p+9Thg1Q+AVTBVQoVlJpmYSehDvkDnbU5fTYLz6z8Phf4lFDl9nxXSyVklwq/Mv5nYbbQIDAQAB",
+   "manifest_version": 2,
+   "name": "VK Custom Stickers",
+   "options_page": "options.html",
+   "permissions": [ "notifications", "webRequest", "webRequestBlocking", "tabs", "*://*.vk.com/*", "*://*.vk.me/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.82",
+   "web_accessible_resources": [ "popup.js","jquery.js", "xd_connection.js" ]
+
+   	
+}
