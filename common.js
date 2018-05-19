@@ -116,7 +116,7 @@ function api(method, params, callback) {
             }
           );
           notification.onclick = function () {
-            window.open('http://vk.com/write133219583');
+            window.open('http://vk.com/write-133219583');
             notification.close();
           }
         }
