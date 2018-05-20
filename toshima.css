@@ -15,6 +15,18 @@
 	width:60px;
     border-bottom: 1px solid #edeef0;
 	border-right: 1px solid #edeef0;
+	padding-bottom: 11px;
+    position: relative;
+}
+.sticker-title {
+    position: absolute;
+    font-size: 11px;
+    text-transform: lowercase;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+	overflow: hidden;
 }
 .single-sticker:hover {
     background-color:#c5d0db;
