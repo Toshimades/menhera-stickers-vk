@@ -10,7 +10,8 @@ if ($("div").is(".toshima-stickers") == false) {
 
 $('.im-page--history').append('<div class="toshima-stickers"></div>');
 for (var i=0;i<photos.length;i++){
-	$('.toshima-stickers').append('<div class="single-sticker"><img src="'+photos[i].url+'" alt="'+photos[i].title+'" width="100%" data-id="'+photos[i].id+'" class="img-fluid sticker-img"></div>');
+	photos[i].title = photos[i].title.substring(0,photos[i].title.indexOf('.png'));
+	$('.toshima-stickers').append('<div class="single-sticker"><div class="sticker-title">'+photos[i].title+'</div><img src="'+photos[i].url+'" alt="'+photos[i].title+'" width="100%" data-id="'+photos[i].id+'" class="img-fluid sticker-img"></div>');
 }
 
 $('.sticker-img').click(function() {
