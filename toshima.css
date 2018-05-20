@@ -9,7 +9,7 @@
 	overflow-y: scroll;
 }
 .single-sticker {
-	float:left;
+	display: inline-block;
     text-align: center;
     padding: 5px;
 	width:60px;
