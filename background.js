@@ -14,7 +14,6 @@ chrome.runtime.onInstalled.addListener(function(details) {
 var albumsId = {};
 var photosId = {};
 var prevurl = -1;
-var loaded = 0;
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete' && tab.active) {
     var https = (tab.url.indexOf('https:') == 0) ? 1 : 0;
@@ -47,10 +46,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
       }
 			
 		if ((tab.url.indexOf('sel=') != -1) && (prevurl == -1)) {
-			if (loaded == 0) {
 			chrome.tabs.insertCSS(null, {file:"toshima.css"});
-			loaded = 1;
-			}
 			chrome.tabs.executeScript(tab.id, {file: 'jquery.js'});
 			chrome.tabs.executeScript(tab.id, {
 				code: 'var photos = ' + JSON.stringify(photos)
