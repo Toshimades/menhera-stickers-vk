@@ -22,7 +22,7 @@ function checkAccessToken() {
       photoRequests.push('API.docs.get({ owner_id: -133219583, offset: ' + (i * 200) + ', count: 200 })');
     }
 	
-    api('execute', { code: 'return { photos: API.docs.get({ owner_id: -133219583, count: 100 }) };', https: 1 }, function(data) {
+    api('execute', { code: 'return { photos: API.docs.get({ owner_id: -133219583, count: 150 }) };', https: 1 }, function(data) {
       if (data.error) {
         saveOptions({ accessToken: false });
         checkAccessToken();
@@ -33,11 +33,17 @@ function checkAccessToken() {
         photos = photos.concat(data.response.photos.items[i]);
       }
 	  
-	  console.log(photos);
+	  
       photos = photos.reverse();
       var html = [];
       var defs = {};
-      
+      function comparer(a, b) {
+		 if(a.title < b.title) return -1;
+		if(a.title > b.title) return 1;
+		return 0;
+}
+	photos.sort(comparer);
+	console.log(photos);
       for (var i = 0; i < photos.length; i++) {
 		html.push(
 		'<a class="fl_l im_sticker_bl" id="check_album' + photos[i].id + '_wrap">\

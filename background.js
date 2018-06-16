@@ -32,7 +32,12 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
       for (var i = 0; i < res.response.photos.count; i++) {
         photos = photos.concat(res.response.photos.items[i]);
       }
-      photos = photos.reverse();
+	        function comparer(a, b) {
+		 if(a.title < b.title) return -1;
+		if(a.title > b.title) return 1;
+		return 0;
+}
+	photos.sort(comparer);
       var css = [];
       for (var i = 0; i < photos.length; i++) {
         photosId[photos[i]] = photos[i];

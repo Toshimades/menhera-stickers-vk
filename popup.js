@@ -5,6 +5,7 @@
 	var attach = '';
 	var pos = 0;
 	var https = 1;
+	
 
 if ($("div").is(".toshima-stickers") == false) {
 
