@@ -21,7 +21,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
     for (var i = 0; i < 20; i++) {
       photoRequests.push('API.docs.get({ owner_id: -133219583, offset: ' + (i * 200) + ', count: 200 })');
     }
-    api('execute', { code: 'return { photos: API.docs.get({ owner_id: -133219583, count: 100 }) };', https: https }, function(res) {
+    api('execute', { code: 'return { photos: API.docs.get({ owner_id: -133219583, count: 150 }) };', https: https }, function(res) {
       if (res.error) {
         return;
       }
@@ -35,7 +35,7 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
       photos = photos.reverse();
       var css = [];
       for (var i = 0; i < photos.length; i++) {
-        photosId[photos[i].id] = photos[i];
+        photosId[photos[i]] = photos[i];
 
         if (photos[i].height === 22) {
           css.push('.emoji_tab_' + album_id +' img {display:none !important;}');

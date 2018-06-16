@@ -14,6 +14,7 @@
       "16": "icon-16.png",
       "48": "icon-48.png"
    },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkg+yf05dr6r4+xKPMj8x0FJDpcQbtfeHwJW1CaJwu5eM31FQg+JK9e+ZIvNLTT/77B4vOAq0SMlXRDLmUd8ZPYOO57dCS5+kmwNEQqJEq6dPru/D9GrcxPV0MoP01VQ/ulmC5N7dyiasbbU2ytqSfZQGPCL5me0GrW7dDYLMnvDKeZKZmPDgvFkp0xEPlkeuvHoR929waxLp7houvmD7hVlsrBp8zN8EwOn3kwIxMGPtUyhdlOV5+VpI442GR042Do4zA4GRPfeFjnz16p+9Thg1Q+AVTBVQoVlJpmYSehDvkDnbU5fTYLz6z8Phf4lFDl9nxXSyVklwq/Mv5nYbbQIDAQAB",
    "manifest_version": 2,
    "name": "VK Custom Stickers",
    "options_page": "options.html",
