@@ -4,7 +4,7 @@
 	background: #fff;
 	width:142px;
     margin-left: 20px;
-    top: 0;
+    bottom: 0;
 	height: 100%;
 	overflow-y: scroll;
 }
